@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="all.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+
+  <title>Image Gallery</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <h1> the gallery of image</h1>
+  <div class="content">
+    
+    <label for="fileInput"><i class="fa-solid fa-cloud-arrow-up"></i> Choose File <br><span>click here</span></label>
+    <input type="file" id="fileInput" accept="image/*" >
+    <button onclick="uploadImage()" class="btn"> Upload Image</button>
+    <button class="btn" onclick="confirm_del()">delete all image</button>
+  </div>
+  <div id="gallery">
+  </div>
+  <div id="model">
+    <div class="model_contian">
+      <p><i class="fa-solid fa-exclamation fa-2xl"></i> are you sure to delete all image ??</p>
+      <button onclick="del_all()" class="model_btn">yes</button>
+      <button onclick="close_model()" class="model_btn">no</button>
+    </div>
+  </div>
+  <div id="editModal">
+    <div class="edit-modal-content">
+      <p>Edit Image Name:</p>
+      <p id="modalImageName"></p>
+      <input type="text" id="editedName" placeholder="enter new name">
+        <button  class="model_btn save_btn" id="save_btn">Save</button>
+        <button onclick="closeEditModal()" class="model_btn">Cancel</button>
+    </div>
+  </div>
+  <div id="slider" class="slider">
+    <span class="slider-close" onclick="closeSlider()"><i class="fa-solid fa-xmark"></i></span>
+    <div class="slider-content" id="sliderContent"></div>
+    <div class="slider-nav">
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
